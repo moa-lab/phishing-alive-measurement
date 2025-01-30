@@ -1,0 +1,153 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>A Longitudinal Study of Vulnerable Client-side Resources and Web Developers' Updating Behaviors (ACM IMC 2023)</title>
+
+  <!-- SEO -->
+  <meta name="author" content="Doowon Kim">
+  <meta name="keywords" content="Measurement, Security, Client-side Resource,
+                                 JavaScript, Adobe Flash, CVE, ACM IMC 2023">
+
+  <!-- Prevent JS cache by Chrome -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <!-- Page content -->
+  <div class="container">
+
+    <!-- Title -->
+    <div class="row mb-3">
+
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
+        <h2>A Longitudinal Study of Vulnerable Client-side Resources and Web Developers' Updating Behaviors</h2>
+        <p id="page-lead" class="lead">Kyungchan Lim<sup>*</sup>, Yonghwi Kwon<sup>†</sup>, and Doowon Kim<sup>*</sup></p>
+        <p id="page-lead" class="lead">University of Tennessee, Knoxville<sup>*</sup> and University of Maryland<sup>†</sup></p>
+        
+
+        <hr/>
+      </div>
+    </div>
+
+    <!-- Project overview -->
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 my-auto">
+
+        <!-- title -->
+        <h4><strong>Abstract</strong></h4>
+
+        <!-- content -->
+        <p id="lead" class="card-text">
+            Modern Websites rely on various client-side web resources, such as JavaScript libraries, 
+            to provide end-users with rich and interactive web experiences. Unfortunately, anecdotal evidence 
+            shows that improperly managed client-side resources could open up attack surfaces that adversaries 
+            can exploit. However, there is still a lack of a comprehensive understanding of the updating practices 
+            among web developers and the potential impact of inaccuracies in Common Vulnerabilities and Exposures (CVE) 
+            information on the security of the web ecosystem. In this paper, we conduct a longitudinal (four-year) measurement study of the security 
+            practices and implications on client-side resources (e.g., JavaScript libraries and Adobe Flash) 
+            across the Web. Specifically, we first collect a large-scale dataset of 157.2M webpages of Alexa Top 1M 
+            websites for four years in the wild. Analyzing the dataset, we find an average of 41.2% websites 
+            (in each year of the four years) carry at least one vulnerable client-side resource (e.g., JavaScript 
+            or Adobe Flash). We also reveal that vulnerable JavaScript library versions are frequently observed 
+            in the wild, suggesting a concerning level of lagging update practice in the wild. On average, 
+            we observe 531.2 days with 25,337 websites of the window of vulnerability due to the unpatched 
+            client-side resources from the release of security patches. Furthermore, we manually investigate 
+            the fidelity of CVE (Common Vulnerabilities and Exposures) reports on client-side resources, 
+            leveraging PoC (Proof of Concept) code. We find that 13 CVE reports (out of 27) have incorrect 
+            vulnerable version information, which may impact security-related tasks such as security updates.
+        </p>
+
+        <!-- H-bar -->
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 my-auto">
+
+        <!-- title -->
+        <h4><strong>Dataset and Source Code</strong></h4>
+
+        <!-- content -->
+        <p id="lead" class="card-text">
+            Source code is publicly available in <a href="https://github.com/moa-lab/measurement-client-side-resources/">this GitHub repository</a>.
+            
+            Also, we share our dataset that we have collected the landing pages (e.g., index.html) of Alexa 1M domain on a weekly basis for four years 
+            (Mar. 2018 – Feb. 2022). Specifically, our Web crawler (implemented in Go using the net/http library) visits each Alexa 1M domain over HTTPS 
+            and collects the landing page of each domain every week.
+            This dataset consists of 157,242,243 (157.2 M) HTML files for the 201 weeks of the four years. 
+            On average, we consistently collect the index pages from the 782,300 domains every week. If you want to download the dataset, please contact us
+            through <a href="https://forms.gle/eTYDFwQcLUQGBMXN9">this Google form</a>. 
+        </p>
+
+        <!-- H-bar -->
+        <hr/>
+      </div>
+    </div>
+
+      <!-- Collaborator logos -->
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
+        <!-- logos -->
+        <img width="28%" src="utk.jpg" alt="University of Tennessee, Knoxville" class="img-fluid">
+        <img width="9%" src="umd.jpg" alt="University of Maryland" class="img-fluid">
+        <img width="24%" src="cyber.png" alt="Maryland Cybersecurity Center" class="img-fluid">
+        <hr/>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted">© 2023 MoA Lab @ The University of Tennessee, Knoxville.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+<!-- Default Statcounter code for My personal website
+https://doowon.github.io -->
+<script type="text/javascript">
+var sc_project=12201168; 
+var sc_invisible=1; 
+var sc_security="ccab86b2"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12201168/0/ccab86b2/1/"
+alt="web counter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+<a href="https://statcounter.com/p12201168/?guest=1">View My
+Stats</a>
+</body>
+</html>
