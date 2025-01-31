@@ -9,12 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Title -->
-  <title>A Longitudinal Study of Vulnerable Client-side Resources and Web Developers' Updating Behaviors (ACM IMC 2023)</title>
+  <title>7 Days Later: Analyzing Phishing-Site Lifespan After Detected (WWW 2025)</title>
 
   <!-- SEO -->
   <meta name="author" content="Doowon Kim">
-  <meta name="keywords" content="Measurement, Security, Client-side Resource,
-                                 JavaScript, Adobe Flash, CVE, ACM IMC 2023">
+  <meta name="keywords" content="Measurement, Security, Phishing, WWW 2025">
 
   <!-- Prevent JS cache by Chrome -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -36,9 +35,9 @@
     <div class="row mb-3">
 
       <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
-        <h2>A Longitudinal Study of Vulnerable Client-side Resources and Web Developers' Updating Behaviors</h2>
-        <p id="page-lead" class="lead">Kyungchan Lim<sup>*</sup>, Yonghwi Kwon<sup>†</sup>, and Doowon Kim<sup>*</sup></p>
-        <p id="page-lead" class="lead">University of Tennessee, Knoxville<sup>*</sup> and University of Maryland<sup>†</sup></p>
+        <h2>7 Days Later: Analyzing Phishing-Site Lifespan After Detected</h2>
+        <p id="page-lead" class="lead">Kiho Lee<sup>*</sup>, Kyungchan Lim<sup>†</sup>, Hyoungshick Kim<sup>‡</sup>, Yonghwi Kwon<sup>§</sup>, and Doowon Kim<sup>†</sup></p>
+        <p id="page-lead" class="lead">ETRI<sup>*</sup>, University of Tennessee, Knoxville<sup>†</sup>, University of Maryland<sup>§</sup></p>, and Sungkyunkwan University<sup>‡</sup>
         
 
         <hr/>
@@ -54,23 +53,21 @@
 
         <!-- content -->
         <p id="lead" class="card-text">
-            Modern Websites rely on various client-side web resources, such as JavaScript libraries, 
-            to provide end-users with rich and interactive web experiences. Unfortunately, anecdotal evidence 
-            shows that improperly managed client-side resources could open up attack surfaces that adversaries 
-            can exploit. However, there is still a lack of a comprehensive understanding of the updating practices 
-            among web developers and the potential impact of inaccuracies in Common Vulnerabilities and Exposures (CVE) 
-            information on the security of the web ecosystem. In this paper, we conduct a longitudinal (four-year) measurement study of the security 
-            practices and implications on client-side resources (e.g., JavaScript libraries and Adobe Flash) 
-            across the Web. Specifically, we first collect a large-scale dataset of 157.2M webpages of Alexa Top 1M 
-            websites for four years in the wild. Analyzing the dataset, we find an average of 41.2% websites 
-            (in each year of the four years) carry at least one vulnerable client-side resource (e.g., JavaScript 
-            or Adobe Flash). We also reveal that vulnerable JavaScript library versions are frequently observed 
-            in the wild, suggesting a concerning level of lagging update practice in the wild. On average, 
-            we observe 531.2 days with 25,337 websites of the window of vulnerability due to the unpatched 
-            client-side resources from the release of security patches. Furthermore, we manually investigate 
-            the fidelity of CVE (Common Vulnerabilities and Exposures) reports on client-side resources, 
-            leveraging PoC (Proof of Concept) code. We find that 13 CVE reports (out of 27) have incorrect 
-            vulnerable version information, which may impact security-related tasks such as security updates.
+          Phishing attacks continue to be a major threat to internet users, causing data breaches, financial losses, and identity theft. 
+          This study provides an in-depth analysis of the lifespan and evolution of phishing websites, focusing on their survival strategies and evasion techniques. 
+          We analyze 286,237 unique phishing URLs over five months using a custom web crawler based on Puppeteer and Chromium. 
+          Our crawler runs on a 30-minute cycle, systematically checking the operational status of phishing websites by collecting their HTTP status codes, screenshots, HTML, and HTTP data.
+          Temporal and survival analyses, along with statistical tests, are used to examine phishing website lifecycles, evolution, and evasion tactics. 
+          Our findings show that the average lifespan of phishing websites is 54 hours (2.25 days) with a median of 5.46 hours, indicating rapid takedown of many sites while a subset remains active longer. 
+          Interestingly, logistic-themed phishing websites (e.g., USPS) operate within a compressed timeframe (1.76 hours) compared to other brands (e.g., Facebook).
+          We further analyze detection effectiveness using Google Safe Browsing (GSB).
+          We find that GSB detects only 18.4% of phishing websites, taking an average of 4.5 days.
+          Notably, 83.93% of phishing sites are already taken down before GSB detection, meaning GSB requires more prompt detection. 
+          Moreover, 16.07% of phishing sites persist beyond this point, surviving for an additional 7.2 days on average, resulting in an average total lifespan of approximately 12 days. 
+          We reveal that DNS resolution error is the main cause (67%) of phishing website takedowns.
+          Finally, we uncover that phishing sites with extensive visual changes
+          (more than 100 times) exhibit a median lifespan of 17 days, compared to 1.93 hours for those with minimal modifications.
+          These results highlight the dynamic nature of phishing attacks, the challenges in detection and prevention, and the need for more rapid and comprehensive countermeasures against evolving phishing tactics.
         </p>
 
         <!-- H-bar -->
@@ -86,14 +83,14 @@
 
         <!-- content -->
         <p id="lead" class="card-text">
-            Source code is publicly available in <a href="https://github.com/moa-lab/measurement-client-side-resources/">this GitHub repository</a>.
+            Source code is publicly available in <a href="https://github.com/moa-lab/phishing-alive-measurement/">this GitHub repository</a>.
             
-            Also, we share our dataset that we have collected the landing pages (e.g., index.html) of Alexa 1M domain on a weekly basis for four years 
-            (Mar. 2018 – Feb. 2022). Specifically, our Web crawler (implemented in Go using the net/http library) visits each Alexa 1M domain over HTTPS 
-            and collects the landing page of each domain every week.
-            This dataset consists of 157,242,243 (157.2 M) HTML files for the 201 weeks of the four years. 
-            On average, we consistently collect the index pages from the 782,300 domains every week. If you want to download the dataset, please contact us
-            through <a href="https://forms.gle/eTYDFwQcLUQGBMXN9">this Google form</a>. 
+            Also, we share our phishing dataset that we have collected (e.g., index.html, screenshots) for 158 days 
+            (April, 2024 - September, 2024). Specifically, our Web crawler (implemented using Puppeteer and Chromium) visits each phishing websites 
+            and collects the landing page of each domain every 30 minutes.
+            This dataset consists of 286,237 phishing URLs and a total of 2.7M visits. 
+            If you want to download the dataset, please contact us
+            through <a href="https://forms.gle/JrtWYBgVcFcEE9p17">this Google form</a>. 
         </p>
 
         <!-- H-bar -->
