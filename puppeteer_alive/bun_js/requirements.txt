@@ -1,0 +1,12 @@
+fs-extra
+path
+rxjs
+bun:sqlite
+node:dns
+console
+puppeteer
+puppeteer-extra
+puppeteer-extra-plugin-stealth
+commander
+puppeteer-core
+@puppeteer/browsers
