@@ -36,6 +36,12 @@ Phishing attacks continue to be a major threat to internet users, causing data b
             ├── apwg_collector_renew_once.py
             └── other_domain_extractor.py
 ```
+## Dataset
+Due to the size limitation, this repository contains sample dataset.
+
+More sample datasets can be found in Zenodo
+
+Full dataset can be accessed upon request. The request link can be found at: https://moa-lab.net/phishing-alive-measurement/
 
 ## Data Structure
 ```
