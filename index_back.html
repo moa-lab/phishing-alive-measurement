@@ -1,0 +1,163 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>7 Days Later: Analyzing Phishing-Site Lifespan After Detected (WWW 2025)</title>
+
+  <!-- SEO -->
+  <meta name="author" content="Doowon Kim">
+  <meta name="keywords" content="Measurement, Security, Phishing, WWW 2025">
+
+  <!-- Prevent JS cache by Chrome -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <!-- Page content -->
+  <div class="container">
+
+    <!-- Title -->
+    <div class="row mb-3">
+
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
+        <h2>7 Days Later: Analyzing Phishing-Site Lifespan After Detected</h2>
+        <p id="page-lead" class="lead">Kiho Lee<sup>* 1</sup>, Kyungchan Lim<sup>* 1</sup>, Hyoungshick Kim<sup>†</sup>, Yonghwi Kwon<sup>‡</sup>, and Doowon Kim<sup>*</sup></p>
+        <p id="page-lead" class="lead">University of Tennessee, Knoxville<sup>*</sup>, Sungkyunkwan University<sup>†</sup>, and University of Maryland<sup>‡</sup></p>
+        <p class="small text-muted mt-2">
+          <sup>1</sup> Kiho Lee and Kyungchan Lim contributed equally to this research.
+        </p>
+        
+
+        <hr/>
+      </div>
+    </div>
+
+    <!-- Project overview -->
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 my-auto">
+
+        <!-- title -->
+        <h4><strong>Abstract</strong></h4>
+
+        <!-- content -->
+        <p id="lead" class="card-text">
+          Phishing attacks continue to be a major threat to internet users, causing data breaches, financial losses, and identity theft. 
+          This study provides an in-depth analysis of the lifespan and evolution of phishing websites, focusing on their survival strategies and evasion techniques. 
+          We analyze 286,237 unique phishing URLs over five months using a custom web crawler based on Puppeteer and Chromium. 
+          Our crawler runs on a 30-minute cycle, systematically checking the operational status of phishing websites by collecting their HTTP status codes, screenshots, HTML, and HTTP data.
+          Temporal and survival analyses, along with statistical tests, are used to examine phishing website lifecycles, evolution, and evasion tactics. 
+          Our findings show that the average lifespan of phishing websites is 54 hours (2.25 days) with a median of 5.46 hours, indicating rapid takedown of many sites while a subset remains active longer. 
+          Interestingly, logistic-themed phishing websites (e.g., USPS) operate within a compressed timeframe (1.76 hours) compared to other brands (e.g., Facebook).
+          We further analyze detection effectiveness using Google Safe Browsing (GSB).
+          We find that GSB detects only 18.4% of phishing websites, taking an average of 4.5 days.
+          Notably, 83.93% of phishing sites are already taken down before GSB detection, meaning GSB requires more prompt detection. 
+          Moreover, 16.07% of phishing sites persist beyond this point, surviving for an additional 7.2 days on average, resulting in an average total lifespan of approximately 12 days. 
+          We reveal that DNS resolution error is the main cause (67%) of phishing website takedowns.
+          Finally, we uncover that phishing sites with extensive visual changes
+          (more than 100 times) exhibit a median lifespan of 17 days, compared to 1.93 hours for those with minimal modifications.
+          These results highlight the dynamic nature of phishing attacks, the challenges in detection and prevention, and the need for more rapid and comprehensive countermeasures against evolving phishing tactics.
+        </p>
+
+        <!-- H-bar -->
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 my-auto">
+
+        <!-- title -->
+        <h4><strong>Dataset and Source Code</strong></h4>
+
+        <!-- content -->
+        <p id="lead" class="card-text">
+            Source code is publicly available in <a href="https://github.com/moa-lab/phishing-alive-measurement/">this GitHub repository</a>.
+            
+            Also, we share our phishing dataset that we have collected (e.g., index.html, screenshots) for 158 days 
+            (April, 2024 - September, 2024). Specifically, our Web crawler (implemented using Puppeteer and Chromium) visits each phishing websites 
+            and collects the landing page of each domain every 30 minutes.
+            This dataset consists of 286,237 phishing URLs and a total of 2.7M visits. 
+            If you want to download the dataset, please contact us
+            through <a href="https://forms.gle/JrtWYBgVcFcEE9p17">this Google form</a>. 
+        </p>
+
+        <!-- H-bar -->
+        <hr/>
+      </div>
+    </div>
+
+      <!-- Collaborator logos -->
+      <style>
+        .circle-img {
+          width: 9%;
+          height: auto;
+          border-radius: 50%; /* Makes it circular */
+          object-fit: cover; /* Ensures the image fills the circle */
+          border: 2px solid #fff; /* Optional: Adds a white border */
+        }
+      </style>
+      
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
+        <!-- logos -->
+        <img width="9%" src="page_resource/utk_logo.png" alt="University of Tennessee, Knoxville" class="img-fluid circle-img">
+        <img width="9%" src="page_resource/umd.jpg" alt="University of Maryland" class="img-fluid circle-img">
+        <img width="11%" src="page_resource/skku-logo.png" alt="Sungkyunkwan University" class="img-fluid">
+        <hr/>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted">© 2025 MoA Lab @ The University of Tennessee, Knoxville.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+<!-- Default Statcounter code for My personal website
+https://doowon.github.io -->
+<script type="text/javascript">
+var sc_project=12201168; 
+var sc_invisible=1; 
+var sc_security="ccab86b2"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12201168/0/ccab86b2/1/"
+alt="web counter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+<a href="https://statcounter.com/p12201168/?guest=1">View My
+Stats</a>
+</body>
+</html>
