@@ -58,6 +58,7 @@ Phishing attacks continue to be a major threat to internet users, causing data b
 	└── ...
 ```
 
+
 ## Prerequisites
 
 - Node.js
