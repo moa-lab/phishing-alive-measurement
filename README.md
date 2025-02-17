@@ -37,6 +37,26 @@ Phishing attacks continue to be a major threat to internet users, causing data b
             └── other_domain_extractor.py
 ```
 
+## Data Structure
+```
+.
+└── alive_puppeteer_data_first_small_batch
+	├── 2024-04-17-05:28
+	│   ├── status_code.txt
+	│   ├── headers.json
+	│   ├── domain_url.txt
+	│   ├── error.log
+	│   ├── page.html
+	│   └── screenshot.jpg
+    ├── 2024-04-17-07:47
+	│   ├── status_code.txt
+	│   ├── headers.json
+	│   ├── domain_url.txt
+	│   ├── error.log
+	│   ├── page.html
+	│   └── screenshot.jpg
+	└── ...
+```
 
 ## Prerequisites
 
