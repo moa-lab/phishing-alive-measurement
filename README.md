@@ -48,7 +48,7 @@ Phishing attacks continue to be a major threat to internet users, causing data b
 	│   ├── error.log
 	│   ├── page.html
 	│   └── screenshot.jpg
-    ├── 2024-04-17-07:47
+        ├── 2024-04-17-07:47
 	│   ├── status_code.txt
 	│   ├── headers.json
 	│   ├── domain_url.txt
@@ -57,7 +57,6 @@ Phishing attacks continue to be a major threat to internet users, causing data b
 	│   └── screenshot.jpg
 	└── ...
 ```
-
 
 ## Prerequisites
 
