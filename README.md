@@ -39,7 +39,8 @@ Phishing attacks continue to be a major threat to internet users, causing data b
 ## Dataset
 Due to the size limitation, this repository contains sample dataset.
 
-More sample datasets can be found in Zenodo
+More sample datasets can be found in Zenodo: DOI: 10.5281/zenodo.14885725
+Zenodo link: https://zenodo.org/uploads/14885725
 
 Full dataset can be accessed upon request. The request link can be found at: https://moa-lab.net/phishing-alive-measurement/
 
